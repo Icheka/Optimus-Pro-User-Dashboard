@@ -1,0 +1,20 @@
+export const backendURI = "https://flashup24.com/previews/backends/Sakani";
+
+export const changePasswordRoute = `${backendURI}/user/changepassword`;
+export const listMyCourses = `${backendURI}/user/subscriptions/list`;
+export const getUser = `${backendURI}/user/find`;
+export const listAllCourses = `${backendURI}/courses/list`;
+export const login = `${backendURI}/user/login`;
+export const signup = `${backendURI}/user/new`;
+export const uploadProfilePhoto = `${backendURI}/user/profile_photo`;
+export const updateUser = `${backendURI}/user/update`;
+export const loginHistory = `${backendURI}/user/login/history`;
+export const fetchCourse = `${backendURI}/courses`;
+export const addSubscription = `${backendURI}/user/subscriptions`;
+export const getCourseVideos = `${backendURI}/courses/videos`;
+export const newReport = `${backendURI}/user/reports`;
+export const getReports = `${backendURI}/user/reports`;
+export const getNotifs = `${backendURI}/user/notifications`;
+export const forgotPassword = `${backendURI}/user/forgot_password`;
+export const sendMessage = `${backendURI}/user/messages/send`;
+export const getMessages = `${backendURI}/user/messages`;
