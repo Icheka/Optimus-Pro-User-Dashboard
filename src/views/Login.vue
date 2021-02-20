@@ -79,7 +79,7 @@ export default class Login extends Vue {
         if (user_id != null) {
             this.$router.push("/student");
         } else {
-            alert(' not null ')
+            alert('You are not signed in')
         }
     }
 
