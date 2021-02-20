@@ -707,6 +707,34 @@
                 </div>
               </router-link>
             </li>
+            <li @click="e => logout()" class="menu">
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-layout"
+                  >
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                  </svg>
+                  <span>Log Out</span>
+                </div>
+            </li>
           </ul>
           <!-- end of sidebar -->
         </nav>
@@ -727,18 +755,16 @@ import { Component, Vue } from "vue-property-decorator";
 import axios from 'axios';
 import { getUser } from '../utils/endpoints';
 
+import { _auth } from '@/utils/index';
+
 @Component
 export default class Overview extends Vue {
     user_id: string = localStorage.getItem("user_id")!;
     user: {} = {};
 
   mounted() {
-    // localStorage.setItem("user_id", "15122020318212551192");
-    // alert(localStorage.getItem("user_id"));
-    // localStorage.removeItem("user_id");
-
+    _auth();
     this.fetchUserDetails(this.user_id);
-    console.log("User :>>", this.user);
 
   }
 
@@ -750,7 +776,7 @@ export default class Overview extends Vue {
 
   logout() {
     localStorage.removeItem("user_id");
-    this.$router.replace("/auth");
+    this.$router.replace("/");
   }
 }
 

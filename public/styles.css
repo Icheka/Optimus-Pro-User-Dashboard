@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 a {
@@ -447,9 +447,15 @@ path {
     padding: 1rem 0rem;
   }
 
+  .about-us-links .about-us-link__item, .markets-links .markets-link__item a {
+    color: white;
+  }
+
   .about-us-links .about-us-link__item, .markets-links .markets-link__item, .academy-links .academy-link__item {
     padding: 0.2rem 0.6rem;
     width: 90%;
+    color: white !important;
+    text-transform: capitalize;
   }
 
   .academy-links .academy-link__item {
@@ -759,4 +765,69 @@ path {
     right: 1rem;
   }
 
+}
+
+#carouselExampleCaptions, .carousel-inner {
+  max-height: 90vh;
+}
+#carouselExampleCaptions, .carousel-inner img {
+  height: 100%;
+  width: auto;
+}
+.carousel-caption {
+  font-size: 150%;
+  text-align: left;
+  color: goldenrod;
+}
+
+.section-tag {
+  color: goldenrod;
+  font-family: 'Montserrat', 'san-serif';
+}
+
+.nation-collections-item {
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .nation-collections-item {
+    width: 80vw;
+    margin: auto;
+  }
+}
+
+
+#testimonials-carousel img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid lightblue;
+}
+
+.testimonial-item {
+  box-shadow: 2px 2px 2px 1px #efefef, -2px 2px 2px 1px #efefef, 2px -2px 2px 1px #efefef, -2px -2px 2px 1px #efefef;
+  border-radius: 6px;
+  text-align: center;
+  background: white;
+  padding: 8px;
+}
+.testimonial-item img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px solid navy;
+  margin: 6px auto;
+}
+.testimonial-item .tag {
+  color: #777;
+  font-size: 101%;
+  font-weight: bold;
+}
+.testimonial-item .caption {
+  color: #999;
+  font-size: 90%;
+  padding: 6px;
+  background-color: #eff;
+  margin: 3px;
+  border-radius: 3px;
 }
