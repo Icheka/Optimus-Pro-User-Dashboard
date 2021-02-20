@@ -483,7 +483,7 @@ export default class Homepage extends Vue {
             }, 10);
         });
 
-        const mouseOverEvt = (e) => {
+        const mouseOverEvt = (e: any) => {
         const liFlag = Boolean(e.target.closest(".nav-link").lastElementChild?.className);
         if (liFlag &&  window.innerWidth < 912) {
             e.target.closest(".nav-link").lastElementChild['style'].display = "block";
@@ -494,7 +494,7 @@ export default class Homepage extends Vue {
         li.addEventListener("mouseover", mouseOverEvt);
         li.addEventListener("click", mouseOverEvt);
 
-        li.addEventListener("mouseout",(e) => {
+        li.addEventListener("mouseout",(e: any) => {
             const liFlag = Boolean(e.target!.closest(".nav-link")!.lastElementChild?.className);
             if (liFlag && window.innerWidth < 912 ) {
             e.target.closest(".nav-link").lastElementChild['style'].display = "none";
@@ -504,20 +504,20 @@ export default class Homepage extends Vue {
 
         // control desktop modal pop-in and pop-out
 
-        avatar.addEventListener("mouseover", (e) => {
+        avatar.addEventListener("mouseover", (e: any) => {
         if ( window.innerWidth > 912 ) {
             e.target.closest("#account-container-desktop")!.lastElementChild['style'].display = "block";
         }
         });
 
-        avatar.addEventListener("mouseout", (e) => {
+        avatar.addEventListener("mouseout", (e: any) => {
         if ( window.innerWidth > 912 ) {
             e.target.closest("#account-container-desktop")!.lastElementChild['style'].display = "none";
         }
         });
 
         navLinks.forEach(li => {
-        li.addEventListener("mouseover",(e) => {
+        li.addEventListener("mouseover",(e: any) => {
             if ( window.innerWidth > 912 ) {
             if (e.target.closest(".nav-link")! && e.target.closest(".nav-link")!.lastElementChild.tagName === "DIV") {
                 e.target.closest(".nav-link")!.lastElementChild['style'].display = "block";
@@ -525,7 +525,7 @@ export default class Homepage extends Vue {
             }
         });
 
-        li.addEventListener("mouseout",(e) => {
+        li.addEventListener("mouseout",(e: any) => {
             if ( window.innerWidth > 912 && e.target.closest(".nav-link")!.lastElementChild.tagName === "DIV") {
             e.target.closest(".nav-link")!.lastElementChild['style'].display = "none";
             }
