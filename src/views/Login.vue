@@ -76,7 +76,7 @@ export default class Login extends Vue {
     mounted() {
         let user_id = localStorage.getItem("user_id");
 
-        if (user_id !== null) {
+        if (user_id != null) {
             this.$router.push("/student");
         }
     }
