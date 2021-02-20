@@ -105,6 +105,7 @@ export default class Login extends Vue {
                 // Redirects 
                 // alert(res.data[0].class);
                 if (res.data[0].class == null || res.data[0].class == 1 || res.data[0].class == 0) {
+                    localStorage.setItem('user_id', res.data[0].user_id);
                     this.$router.push("/student/dashboard");
                 } else if (res.data[0].class == 2) {
                     this.$router.push("/investor/dashboard");
